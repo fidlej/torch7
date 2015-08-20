@@ -510,7 +510,7 @@ type(tensor:type())
 <a name="torch.isTensor"></a>
 ### [boolean] isTensor(object) ###
 
-Returns `true` iff the provided `object` is one of the `torch.*Tensor` types.
+Returns `true` iff the provided `object` is one of the Tensor types.
 
 ```lua
 > torch.isTensor(torch.randn(3,4))

@@ -423,9 +423,7 @@ end
 function Tensor.view(result, src, ...)
    local size = ...
    local view, tensor
-   local function istensor(tensor)
-      return torch.typename(tensor) and torch.typename(tensor):find('torch.*Tensor')
-   end
+   local istensor = torch.isTensor
    local function isstorage(storage)
       return torch.typename(storage) and torch.typename(storage) == 'torch.LongStorage'
    end

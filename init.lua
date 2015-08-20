@@ -128,7 +128,7 @@ end
 
 function torch.isTensor(obj)
    local typename = torch.typename(obj)
-   if typename and typename:find('torch.*Tensor') then
+   if typename and obj.isContiguous then
       return true
    end
    return false
